@@ -13,6 +13,13 @@ Instalar estas dependencias:
 ```sh
 pipenv install scikit-criteria numpi pandas
 ```
+
+### Correr el Script
+Se realiza con el siguiente comando:
+```sh
+python modelo_wpm.py
+```
+
 ## Elaborado por 
 Elaborado por Raúl Avilés, empresa Cochitas.
 [Raúl Aviles](https://raulaviles.netlify.app/)
