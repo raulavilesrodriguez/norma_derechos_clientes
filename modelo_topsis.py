@@ -7,30 +7,27 @@ import matplotlib.pyplot as plt
 def main():
     # Matriz de alternativas
     matrix = [
-        [11147, 3, 1480, 4, 2],  # alternativa 1: ModificaciónNormativa
-        [14332, 2, 2400, 2, 1],  # alternativa 2
-        [14332, 4, 840, 2, 1], # alternativa 3
-        [15924, 1, 1200, 1, 1], # alternativa 4
+        [383052, 17760, 523274, 150000],  # alternativa 1: ModificaciónNormativa
+        [116093, 24480, 790233, 0.1],  # alternativa 2: Difusión y ActividadesControl
+        [0, 14400, 906326, 0.1], # alternativa 3: No Acción
     ]
 
-    objectives = [min, max, min, max, min]
+    objectives = [max, min, min, min]
 
     dm = skc.mkdm(
         matrix,
         objectives,
-        weights=[0.30, 0.20, 0.10, 0.30, 0.10],
+        weights=[0.25, 0.25, 0.25, 0.25],
         alternatives=[
-            'ModificaciónNormativa', 
-            'ActividadesControl', 
-            'Difusión', 
+            'ModNormativa', 
+            'Comunicación',  
             'NoAcción'
         ],
         criteria=[
-            'NumReclamos',
-            'ImagenInstitucional',
+            'BenefCliente',
             'CostoArcotel',
-            'Transparencia',
-            'CostoPrestadores'
+            'CostoCliente',
+            'CostoPrestador'
         ],
     )
 
